@@ -17,9 +17,9 @@ class Monty:
         shuffle(self.vars)
 
     def open(self):
-        return choice([x for x in range(1, N) if x != 0 and not self.vars[x]])
+        return choice([x for x in range(1, N) if not self.vars[x]])
 
-    def check(self, var):
+    def check(self, var=0):
         return self.vars[var]
 
 n = 1000
@@ -40,7 +40,7 @@ for i in range(10):
       m = Monty()
       h = m.open()
       v = choice([x for x in range(1, N) if x != h])
-      stat2 += m.check(v)
+      stat2 += m.check()
   stat2 = stat2/n
   result2.append(stat2)
 
