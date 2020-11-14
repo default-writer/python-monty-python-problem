@@ -5,7 +5,7 @@ from random import shuffle, choice
 #
 # imrovement is 1/n*(n-2) so chances are 1/n + 1/n(n-2) = (n-1)/n(n-2)
 #
-N = 9
+N = 3
 # at 10 doors it is 1/n*(n-2) or 0.0125 chances improvement
 # at 9 it is 0.(015873) chances improvement
 # at 8 it is 0.0208(3) chances improvement
