@@ -40,10 +40,11 @@ for i in range(10):
       m = Monty()
       h = m.open()
       v = choice([x for x in range(1, N) if x != h])
-      stat2 += m.check()
+      #stat2 += m.check() # that will return the same success rates
+      stat2 += m.check(v) # that will return imporved success rates
   stat2 = stat2/n
   result2.append(stat2)
 
-print(sum(result1)/10, sum(result2)/10)
 
-# -> 333 666 или около того
+# -> 0.2 0.267 respectively
+print(sum(result1)/10, sum(result2)/10)
